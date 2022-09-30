@@ -2,12 +2,13 @@ file(READ "${CMAKE_CURRENT_LIST_DIR}/vcpkg.json" _contents)
 string(JSON OPENCV_VERSION GET "${_contents}" version)
 
 set(USE_QT_VERSION "5")
+set(OPENCV_REF "36f7da2d4a571c59be8dac6b7ac13815d0f1efc6")
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO opencv/opencv
-    REF ${OPENCV_VERSION}
-    SHA512 93d7807794682990b6a1d1de1851986ae3c5d1afe6605f3f8cace03ba5e3390bee2568bc0f335af34d3fc974df64cbce0ce685261ec2abd693d259b97b15bc46
+    REPO Beholder-Vision/opencv
+    REF ${OPENCV_REF}
+    SHA512 7ca516b5e3d0423f68b6ad2a2f79d523ddc1c1e540e2ba85c0517bbf558f6bc83743618c8a097093350201f45be45d0b0ce8a0121085e489bf5240b0956864e9
     FILE_DISAMBIGUATOR 1
     HEAD_REF master
     PATCHES
@@ -171,7 +172,7 @@ if("contrib" IN_LIST FEATURES)
   vcpkg_from_github(
     OUT_SOURCE_PATH CONTRIB_SOURCE_PATH
     REPO opencv/opencv_contrib
-    REF ${OPENCV_VERSION}
+    REF ${OPENCV_REF}
     SHA512 2e9cc9632774babf59cd186cd7b7edbd35a816bdda2acb51339c514a33fc6d8c3f1687eb3b0f6827304e3fcb0f9f3e81d47e8ab08239175750ac1240cc99dc5d
     HEAD_REF master
     PATCHES

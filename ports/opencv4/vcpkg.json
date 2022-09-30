@@ -1,7 +1,6 @@
 {
   "name": "opencv4",
-  "version": "4.6.0",
-  "port-version": 5,
+  "version": "4.6.0-Beholder",
   "description": "computer vision library",
   "homepage": "https://github.com/opencv/opencv",
   "license": "Apache-2.0",
@@ -174,7 +173,10 @@
     "jasper": {
       "description": "JPEG 2000 support for opencv",
       "dependencies": [
-        "jasper"
+        {
+          "name": "jasper",
+          "default-features": false
+        }
       ]
     },
     "jpeg": {
