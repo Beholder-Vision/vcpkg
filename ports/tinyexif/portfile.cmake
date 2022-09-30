@@ -1,18 +1,20 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO cdcseacave/TinyEXIF
-    REF 6e56015f56ee0f387f1b8c76e50eb35ac60372da #2022-02-15
-    SHA512 46f55a163cfed2d8fadd7ac0425b190c59136252e5f60d945f6655d0a6df20ea08f272d25c66e76df4c8c0340f654cef875da12627b8bef88f8f6e875fc1bf48
-    HEAD_REF master
+    REPO Beholder-Vision/TinyEXIF
+    REF 9cd9560e9291877270e777636b086dedff637ddf
+    SHA512 21683024a2040ca8e76e08b62dfd67001b730328de555ea205c7b5ce73d7fd61388f3a5ac80cea8f78a35bffada9219b23b17c37af75b86e069327e04777ea65
+    HEAD_REF beholder
 )
 
 string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "static" BUILD_STATIC_LIBS)
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
+    # BUILD_SHARED_LIBS is auto set by vcpkg
     OPTIONS
         -DBUILD_STATIC_LIBS=${BUILD_STATIC_LIBS}
         -DBUILD_DEMO=OFF
+        -DENABLE_XMP_SUPPORT=OFF
 )
 
 vcpkg_cmake_install()
