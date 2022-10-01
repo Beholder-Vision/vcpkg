@@ -7294,7 +7294,7 @@
     },
     "tinyexif": {
       "baseline": "2022-10-01",
-      "port-version": 0
+      "port-version": 1
     },
     "tinyexpr": {
       "baseline": "2020-09-25",
