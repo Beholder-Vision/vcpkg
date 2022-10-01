@@ -1,6 +1,6 @@
 {
   "name": "tinyexif",
-  "version-date": "2022-09-30",
+  "version-date": "2022-10-01",
   "description": "tiny ISO-compliant C++ EXIF and XMP parsing library for JPEG images",
   "homepage": "https://github.com/cdcseacave/TinyEXIF",
   "dependencies": [
